@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Calculadora());
+void main() => runApp(const Calculadora());
 
 class Calculadora extends StatelessWidget {
   const Calculadora({super.key});
@@ -8,12 +8,12 @@ class Calculadora extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CalculadoraApp',
+      title: 'Calculadora App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      home: MyHomePage(title: 'CalculadoraApp'),
+      home: const MyHomePage(title: 'Calculadora App'),
     );
   }
 }
@@ -89,7 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: OutlinedButton(
             child: Text(
               buttonText,
-              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              style:
+                  const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
             onPressed: () => buttonPressed(buttonText),
           ),
@@ -109,16 +110,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Container(
               alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.2),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.2),
               child: Text(
                 output,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 48.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            Expanded(
+            const Expanded(
               child: Divider(),
             ),
             new Column(
